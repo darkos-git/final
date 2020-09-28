@@ -30,5 +30,6 @@
 	<classpathentry kind="lib" path="lib/poi-scratchpad-4.1.2.jar"/>
 	<classpathentry kind="lib" path="lib/SparseBitSet-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/xmlbeans-3.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bice/Desktop/skola/commons-io-2.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
