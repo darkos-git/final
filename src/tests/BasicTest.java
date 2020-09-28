@@ -25,6 +25,16 @@ public abstract class BasicTest {
 	protected WebDriverWait wait;
 	protected JavascriptExecutor js;
 
+	public BasicTest(String baseUrl, String userId, String userPw, WebDriver driver, WebDriverWait wait,
+			JavascriptExecutor js) {
+		this.baseUrl = baseUrl;
+		this.userId = userId;
+		this.userPw = userPw;
+		this.driver = driver;
+		this.wait = wait;
+		this.js = js;
+	}
+
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
