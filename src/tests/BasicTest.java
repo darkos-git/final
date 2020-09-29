@@ -42,9 +42,10 @@ public abstract class BasicTest {
 
 		this.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		// WebDriverWait wait = new WebDriverWait(driver, 10);
 	}
 
+	// if test fail this method make screenshot
 	@AfterMethod
 	public void afterTest(ITestResult result) throws Exception {
 		String testTime = new SimpleDateFormat("yyyyMMddHHmmss'.txt'").format(new Date());
