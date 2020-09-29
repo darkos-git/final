@@ -4,10 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LocationPopupPage {
-	protected WebDriver driver;
-	protected JavascriptExecutor js;
+public class LocationPopupPage extends BasicPage {
+	public LocationPopupPage(WebDriver driver, WebDriverWait wait, JavascriptExecutor js) {
+		super(driver, wait, js);
+		
+	}
+
 
 	// WebElement locators
 	public WebElement getLocation() {
@@ -15,7 +19,7 @@ public class LocationPopupPage {
 	}
 
 	public WebElement getClose() {
-		return this.driver.findElement(By.className("close-btn"));
+		return this.driver.findElement(By.xpath("//*[@id='location-popup']/div/div/div/div/a"));
 	}
 
 	public WebElement getKeyword() {
