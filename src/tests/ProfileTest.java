@@ -1,10 +1,12 @@
 package tests;
 
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.LocationPopupPage;
 import pages.LoginPage;
+import pages.NotificationSystemPage;
 
 public class ProfileTest extends BasicTest {
 	
@@ -18,10 +20,11 @@ public class ProfileTest extends BasicTest {
 		this.driver.navigate().to(baseUrl + "/guest-user/login-form");
 		LocationPopupPage lpp = new LocationPopupPage(driver, wait, js);
 		LoginPage lp = new LoginPage(driver, wait, js);
+		NotificationSystemPage np = new NotificationSystemPage(driver, wait, js);
 		Thread.sleep(1000);
 		lpp.closePopLocation();
 		lp.Login(userId, userPw);
-		
+		Assert.assertEquals("Login Successfull", np.AlertMsg(),"[ERROR]  you are not log in");
 		
 		
 		

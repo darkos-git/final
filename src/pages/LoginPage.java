@@ -15,7 +15,7 @@ public class LoginPage extends BasicPage {
 
 	
 	
-	// webElements locator
+	// webElements locator  
 	public WebElement loginButton() {
 		return this.driver.findElement(By.xpath("//*[text()='Login']"));
 	}
